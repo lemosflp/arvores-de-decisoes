@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvores de decisões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="names">
+        <h3>Everton Santos de Casto, Felipe Lemos Oliveira e Pedro Henrique Canabarro</h3>
+    </div>
+    
+    <div class="all">
+        <div class="sumary">
+            <ul class="list">
+                <li class="tab"><a href="#1">Introdução</a></li>
+                <li class="tab"><a href="#2">Fundamentos teóricos</a></li>
+                <li class="tab"><a href="#3">Funcionamento geral</a></li>
+                <li class="tab"><a href="#4">Metodologia</a></li>
+                <li class="tab"><a href="#5">Aplicações</a></li>
+            </ul>
+        </div>
+        <h1 class="tittle">Árvores de decisão</h1>
+        <h2 class="subtittle" id="1">Introdução</h2>
+        <p class="body">Árvores de decisões são modelos que são criados para previsões e tomando decisões de acordo com as regras do algoritmo. Um dos algoritimos mais intuitivos e visuais em machine learning, simulando o processo de pensamento humano ao organizar dados hierarquicamente. 
+        </p>
+        <h2 class="subtittle" id="2">Fundamentos teóricos</h2>
+        </p>
+        <h3 class="subtittle2">ID3 (Iterative Dichotomiser 3)</h3>
+        <p class="body">ID3 foi um dos primeiros algoritmos desenvolvidos para a construção de árvores de decisão, criado por Ross Quinlan em 1986. Utiliza o conceito de ganho de informação (information gain) para decidir qual atributo deve ser escolhido em cada nó da árvore. O atributo que proporciona o maior ganho de informação é selecionado para dividir o conjunto de dados em cada iteração. Uma de suas limitações é que como ele tende a criar árvores muito grandes e complexas, pode ococrrer overfitting se não for utilizado um mecanismo de poda.
+        </p>
+        <h3 class="subtittle2">C4.5</h3>
+        <p class="body">O algoritmo C4.5 é uma evolução do algoritmo ID3, desenvolvido também por Ross Quinlan e lançado no ano de 1993. Seu funcionamento utiliza o ganho de informação normalizado (normalized information gain), que leva em consideração o número de valores distintos de um atributo. Além disso, suporta atributos contínuos, tratando-os de maneira eficiente. Uma de suas melhorias, trata-se da capacidade de lidar com valores faltantes nos dados e também possui um mecanismo de poda de árvores para evitar overfitting.
+        </p>
+        <h3 class="subtittle2">C5.0</h3>
+        <p class="body">Versão comercial do algoritmo C4.5. Funciona similar ao C4.5, porém com melhorias de desempenho e eficiência computacional. A principal diferença é a otimização do algoritmo para lidar com grandes volumes de dados e para ser mais rápido na construção das árvores de decisão. Uma de suas características é o suporte a características adicionais, como atributos de custo e pesos para os exemplos.
+        </p>
+        <div class="imgFormat">
+            <img src="/assets/iaiaiaia.png" alt="Gráfico de precisão dos algoritimos">
+            <h5>Gráfico de precisão dos algoritimos</h5>
+        </div>
+        <h2 class="subtittle" id="3">Funcionamento geral dos algoritmos </h2>
+        <h3 class="subtittle2">Construção da árvore</h3>
+        <p  class="body">Os algoritmos começam com todos os exemplos de treinamento em um único nó e, recursivamente, dividem o conjunto de dados em subconjuntos menores em cada nó subsequente.</p>
+        <h3 class="subtittle2">Critérios de Divisão</h3>
+        <ul class="listBody">
+            <li class="tab"><span>Escolha do Atributo de Divisão: </span>Selecionar o atributo que melhor separa os dados de acordo com um critério, como ganho de informação ou índice de Gini.</li>
+            <li class="tab"><span>Ganho de Informação Normalizado (Normalized Information Gain):</span> Utilizado pelo C4.5, ajusta o ganho de informação para levar em conta o número de valores distintos de um atributo.</li>
+            <li class="tab"><span>Índice de Gini: </span>Uma alternativa comum em árvores de decisão para classificação binária, mede a impureza dos dados.</li>
+        </ul>
+        <h3 class="subtittle2">Poda da Árvore</h3>
+        <p  class="body">é o processo de remover partes da árvore que não fornecem informações significativas. Existem dois tipos principais de poda:
+        </p>
+        <ul class="listBody">
+            <li class="tab"><span>Poda Prévia (Pre-Pruning): </span> Interrompe a construção da árvore antecipadamente, com base em critérios como a profundidade máxima da árvore ou o número mínimo de amostras por nó.</li>
+            <li class="tab"><span>Poda Posterior (Post-Pruning):</span> Remove nós após a árvore ter sido construída, geralmente usando um conjunto de validação para decidir quais nós remover.</li>
+        </ul>
+        <div class="imgFormat">
+            <img src="/assets/poda-arvore.png" alt="Exemplo de poda de árvore">
+            <h5>Exemplo de poda. (A) árvore completa; (B) subárvore; e (C) árvore final após a poda.</h5>
+        </div>
+        <h2 class="subtittle" id="4">Metodologia</h2>
+        <p class="body">A construção de uma árvore de decisão envolve os seguintes passos:</p>
+        <ol class="listBody">
+            <li class="tab"><span>Ganho de Informação (Information Gain): </span>Utilizado pelo ID3, mede a redução de entropia após a divisão dos dados.</li>
+            <li class="tab"><span>Divisão dos Dados:</span> Dividir o conjunto de dados em subconjuntos com base nos valores do atributo escolhido.</li>
+            <li class="tab"><span>Continuação Recursiva: </span>Repetir o processo de escolha e divisão até que todas as folhas contenham dados homogêneos ou que não haja mais atributos para dividir.</li>
+        </ol>
+        <h2 class="subtittle" id="5">Aplicações </h2>
+        <p class="body">Árvores de decisão são amplamente utilizadas em diversas áreas, como:
+        </p>
+        <ul class="listBody">
+            <li class="tab"><span>Diagnóstico Médico: </span>Árvores de decisão podem ser usadas para diagnosticar doenças com base em sintomas e exames.</li>
+            <li class="tab"><span>Detecção de Fraudes: </span> Usadas para identificar transações fraudulentas analisando padrões em dados financeiros.</li>
+            <li class="tab"><span>Previsão de Falhas: </span>Aplicadas em manutenção preditiva para prever falhas em máquinas e equipamentos.</li>
+            <li class="tab"><span>Marketing: </span>Utilizadas para segmentação de clientes e previsão de comportamento de compra.</li>
+        </ul>
+    </div>
+</body>
+</html>
