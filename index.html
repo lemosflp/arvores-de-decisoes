@@ -18,22 +18,25 @@
                 <li class="tab"><a href="#3">Funcionamento geral</a></li>
                 <li class="tab"><a href="#4">Metodologia</a></li>
                 <li class="tab"><a href="#5">Aplicações</a></li>
+                <li class="tab"><a href="#6">Desafios e Limitações</a></li>
+                <li class="tab"><a href="#7">Conclusão</a></li>
+
             </ul>
         </div>
         <h1 class="tittle">Árvores de decisão</h1>
         <h2 class="subtittle" id="1">Introdução</h2>
-        <p class="body">Árvores de decisões são modelos que são criados para previsões e tomando decisões de acordo com as regras do algoritmo. Um dos algoritimos mais intuitivos e visuais em machine learning, simulando o processo de pensamento humano ao organizar dados hierarquicamente. 
+        <p class="body">Árvores de decisões são modelos criados para fazer previsões e decisões de acordo com as regras do algoritmo. Considerado um dos algoritimos mais intuitivos e visuais em machine learning, simulando o processo de pensamento humano ao organizar dados hierarquicamente. 
         </p>
         <h2 class="subtittle" id="2">Fundamentos teóricos </h2>
         </p>
         <h3 class="subtittle2">ID3 (Iterative Dichotomiser 3)</h3>
-        <p class="body">ID3 foi um dos primeiros algoritmos desenvolvidos para a construção de árvores de decisão, criado por Ross Quinlan em 1986. Utiliza o conceito de ganho de informação (information gain) para decidir qual atributo deve ser escolhido em cada nó da árvore. O atributo que proporciona o maior ganho de informação é selecionado para dividir o conjunto de dados em cada iteração. Uma de suas limitações é que como ele tende a criar árvores muito grandes e complexas, pode ococrrer overfitting se não for utilizado um mecanismo de poda.
+        <p class="body">ID3 foi um dos primeiros algoritmos desenvolvidos para a construção de árvores de decisão, criado por Ross Quinlan em 1986. Utiliza o conceito de ganho de informação (information gain) para decidir qual atributo deve ser escolhido em cada nó da árvore. O atributo que proporciona o maior ganho de informação é selecionado para dividir o conjunto de dados em cada iteração. Uma de suas limitações se deve ao fato de criar árvores muito grandes e complexas, podendo ocorrer overfitting se não for utilizado um mecanismo de poda.
         </p>
         <h3 class="subtittle2">C4.5</h3>
-        <p class="body">O algoritmo C4.5 é uma evolução do algoritmo ID3, desenvolvido também por Ross Quinlan e lançado no ano de 1993. Seu funcionamento utiliza o ganho de informação normalizado (normalized information gain), que leva em consideração o número de valores distintos de um atributo. Além disso, suporta atributos contínuos, tratando-os de maneira eficiente. Uma de suas melhorias, trata-se da capacidade de lidar com valores faltantes nos dados e também possui um mecanismo de poda de árvores para evitar overfitting.
+        <p class="body">O algoritmo C4.5 é uma evolução do algoritmo ID3, desenvolvido também por Ross Quinlan e lançado no ano de 1993. Seu funcionamento utiliza o ganho de informação normalizado (normalized information gain), que leva em consideração o número de valores distintos de um atributo. Além disso, suporta atributos contínuos, tratando-os de maneira eficiente. Uma de suas melhorias, trata-se da capacidade de lidar com valores faltantes nos dados, além de possuir um mecanismo de poda de árvores para evitar overfitting.
         </p>
         <h3 class="subtittle2">C5.0</h3>
-        <p class="body">Versão comercial do algoritmo C4.5. Funciona similar ao C4.5, porém com melhorias de desempenho e eficiência computacional. A principal diferença é a otimização do algoritmo para lidar com grandes volumes de dados e para ser mais rápido na construção das árvores de decisão. Uma de suas características é o suporte a características adicionais, como atributos de custo e pesos para os exemplos.
+        <p class="body">Versão comercial do algoritmo C4.5. Funciona similar à sua antiga versão, porém com melhorias de desempenho e eficiência computacional. A principal diferença é a otimização do algoritmo para lidar com grandes volumes de dados, com o objetivo de ser mais rápido na construção das árvores de decisão. Uma de suas características é o suporte a características adicionais, como atributos de custo e pesos para os exemplos.
         </p>
         <div class="imgFormat">
             <img src="/assets/graf.png" alt="Gráfico de precisão dos algoritimos">
@@ -75,6 +78,24 @@
             <li class="tab"><span>Previsão de Falhas: </span>Aplicadas em manutenção preditiva para prever falhas em máquinas e equipamentos.</li>
             <li class="tab"><span>Marketing: </span>Utilizadas para segmentação de clientes e previsão de comportamento de compra.</li>
         </ul>
+        <h2 class="subtittle" id="6">Desafios e Limitações</h2>
+        <h3 class="subtittle2">Questões específicas como dados desbalanceados e atributos correlacionados</h3>
+        <p class="body">As árvores de decisão podem enfrentar dificuldades com conjuntos de dados desbalanceados, onde uma classe é significativamente mais frequente do que outras, potencialmente enviesando a árvore em direção à classe majoritária. Além disso, atributos correlacionados podem confundir algoritmos de árvores de decisão ao inflar a importância de certas características, levando a divisões menos eficazes.
+        </p>
+        <h3 class="subtittle2">Comparação com outros métodos de aprendizado de máquina</h3>
+        <p class="body">Comparadas a métodos como redes neurais ou máquinas de vetores de suporte, as árvores de decisão geralmente são mais fáceis de interpretar e visualizar, mas nem sempre fornecem a maior precisão, especialmente com conjuntos de dados complexos ou quando as características têm interações complexas.</p>
+        <h3 class="subtittle2">Medidas para mitigar esses desafios</h3>
+        <p class="body">Técnicas como poda (tanto pré-poda quanto pós-poda) ajudam a mitigar o overfitting, que é um desafio comum com árvores de decisão. Além disso, métodos de conjunto como Florestas Aleatórias combinam múltiplas árvores de decisão para melhorar o desempenho e a generalização.</p>
+        <h2 class="subtittle" id="7">Conclusão</h2>
+        <h3 class="subtittle2">Pontos principais</h3>
+        <p class="body">Embora intuitivas e eficazes para certas tarefas, enfrentam desafios relacionados às características e complexidade do conjunto de dados. Elas se destacam em termos de interpretabilidade, mas podem exigir ajustes cuidadosos para evitar o overfitting.
+        </p>
+        <h3 class="subtittle2">Futuras implicações</h3>
+        <p class="body">Futuras pesquisas poderiam focar em melhorar a robustez das árvores de decisão para lidar de forma mais eficaz com conjuntos de dados complexos com características de alta dimensionalidade e correlacionadas. Explorar métodos híbridos que combinem árvores de decisão com aprendizado profundo ou aprendizado por reforço também poderia ser promissor.
+            Importância contínua das árvores de decisão no aprendizado de máquina: Apesar de abordagens mais recentes, as árvores de decisão continuam sendo essenciais devido à sua simplicidade, transparência e aplicabilidade em diversos domínios.            
+        </p>
+
+
     </div>
 </body>
 </html>
